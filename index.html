@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shapoorji Santacruz - Luxury Apartments Coming Soon</title>
+    <title>Shapoorji Santacruz - Premium 2 & 3 BHK Homes in Santacruz, Mumbai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Rounded Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Luxury<span>Home</span>Collection</div>
+            <div class="logo"> Shapoorji Santacruz</div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#details"><i class="fas fa-building"></i> Details</a></li>
-                <li><a href="#stats"><i class="fas fa-chart-line"></i> Stats</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="#location"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Overview</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#map-section">Location</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -27,167 +31,412 @@
         </div>
     </nav>
 
-    <!-- Home Section with Parallax -->
-    <section class="home-section" id="home">
-        <div class="parallax-bg"></div>
-        <div class="floating-elements">
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-            <div class="float-element"></div>
-        </div>
-        <div class="home-content">
-            <div class="title-container">
-                <h1>SHAPOORJI SANTACRUZ</h1>
-                <div class="title-underline"></div>
+    <!-- Enhanced Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> Premium Living Experience
             </div>
-            <div class="coming-soon-badge">Coming Soon</div>
-            <p>Experience Unparalleled Luxury in Mumbai's Most Exclusive Prime Location</p>
+            <h1>Experience Luxury Living in <span>Santacruz, Mumbai</span></h1>
+            <p>Discover premium 2 & 3 BHK homes at Shapoorji Santacruz, where modern design meets exceptional comfort in one of Mumbai's most prestigious neighborhoods.</p>
+            <div class="cta-buttons">
+                <button class="btn-primary" onclick="openModal('price')">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    Request Price Sheet
+                </button>
+                <button class="btn-secondary" onclick="openModal('visit')">
+                    <i class="fas fa-calendar-alt"></i>
+                    Schedule Visit
+                </button>
+                <button class="btn-secondary" onclick="openModal('brochure')">
+                    <i class="fas fa-download"></i>
+                    Download Brochure
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">14</span>
+                    <span class="stat-label">Premium Storeys</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Luxury Wings</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Parking Levels</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Premium Living</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section" id="stats">
-        <div class="container">
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-subtitle">A modern residential project promising a lifestyle centered around convenience and quality</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-content">
+                <h3>Elevated Living Experience</h3>
+                <p>Shapoorji Santacruz is a 14-storey residential project featuring 4 levels of basement parking, terrace-level amenities, and spacious balconies with open views. Built with premium Shapoorji construction quality.</p>
+                
+                <!-- Chart-like element -->
+                <div class="chart-container">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="font-weight: 600; color: var(--text-primary);">Construction Progress</span>
+                        <span style="color: var(--accent-primary); font-weight: 600;">85%</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="width: 85%;"></div>
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Estimated completion: Q3 2024</div>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-item float-animation">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <strong>14 Storeys</strong> | G+14 residential towers
+                        </div>
+                    </div>
+                    <div class="feature-item float-animation" style="animation-delay: 0.2s;">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <strong>4-Level Parking</strong> | Basement parking for all
+                        </div>
+                    </div>
+                    <div class="feature-item float-animation" style="animation-delay: 0.4s;">
+                        <i class="fas fa-tree"></i>
+                        <div>
+                            <strong>Terrace Amenities</strong> | Landscaped lifestyle spaces
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <img src="images/image 1.jpg" alt="Luxury Building">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Highlights with Background Image -->
+    <section id="highlights">
+        <div class="section-header">
             <h2 class="section-title">Project Highlights</h2>
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number" id="stat1">0</div>
-                    <div class="stat-label">Luxury Apartments</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="stat2">0</div>
-                    <div class="stat-label">Distinct Layouts</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="stat3">14</div>
-                    <div class="stat-label">Exclusive Storeys</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="stat4">3</div>
-                    <div class="stat-label">Premium Wings</div>
-                </div>
+            <p class="section-subtitle">Designed for modern urban living with every detail thoughtfully planned</p>
+        </div>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Prime Location</h3>
+                <p>Strategically located in the heart of Santacruz, offering quick access to business hubs, schools, hospitals and transport links.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-building"></i>
+                <h3>G+14 Towers</h3>
+                <p>Three wings with reduced crowding, increased privacy, and ample natural light for all units.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-car-side"></i>
+                <h3>4-Level Parking</h3>
+                <p>Dedicated basement parking zone ensuring convenient parking for every apartment and visitors.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-home"></i>
+                <h3>Premium Layouts</h3>
+                <p>2BHK, 3BHK, and spacious 2BHK Jodi layouts designed for comfort and functionality.</p>
             </div>
         </div>
     </section>
 
-            <div class="details-grid">
-                <div class="detail-card">
-                    <h3><i class="fas fa-bed"></i> 2 BHK Apartments</h3>
-                    <ul>
-                        <li>680 sq.ft - Compact & Efficient</li>
-                        <li>730 sq.ft - Spacious Layout</li>
-                        <li>770 sq.ft - Premium Design</li>
-                        <li>829 sq.ft - Luxury Living</li>
-                    </ul>
+    <!-- Amenities Slider Section -->
+    <section id="amenities">
+        <div class="section-header">
+            <h2 class="section-title">Premium Amenities</h2>
+            <p class="section-subtitle">Experience luxury living with world-class amenities at your doorstep</p>
+        </div>
+        <div class="swiper amenitiesSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/photo 9.avif" class="amenity-slide-img" alt="Swimming Pool">
+                    <div class="amenity-slide-content">
+                        <i class="fas fa-swimming-pool"></i>
+                        <h3>Infinity Swimming Pool</h3>
+                        <p>Luxurious temperature-controlled swimming pool with stunning city views.</p>
+                    </div>
                 </div>
-
-                <div class="detail-card">
-                    <h3><i class="fas fa-bed"></i> 3 BHK Apartments</h3>
-                    <ul>
-                        <li>1090 sq.ft - Modern Living</li>
-                        <li>1290 sq.ft - Elegant Space</li>
-                        <li>1340 sq.ft - Premium Choice</li>
-                    </ul>
+                <div class="swiper-slide">
+                    <img src="images/photo 8.avif" class="amenity-slide-img" alt="Gym">
+                    <div class="amenity-slide-content">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Fully Equipped Gym</h3>
+                        <p>State-of-the-art fitness center with premium equipment and personal trainers.</p>
+                    </div>
                 </div>
-
-                <div class="detail-card">
-                    <h3><i class="fas fa-home"></i> Jodi Apartments</h3>
-                    <ul>
-                        <li>2 BHK Jodi - Double Space</li>
-                        <li>3 BHK Jodi - 1650 sq.ft</li>
-                        <li>Ultimate Luxury Living</li>
-                    </ul>
+                <div class="swiper-slide">
+                    <img src="images/photo 7.avif" class="amenity-slide-img" alt="Garden">
+                    <div class="amenity-slide-content">
+                        <i class="fas fa-tree"></i>
+                        <h3>Landscaped Gardens</h3>
+                        <p>Beautifully maintained gardens with walking paths and meditation zones.</p>
+                    </div>
                 </div>
+                <div class="swiper-slide">
+                    <img src="images/photo 6.avif" class="amenity-slide-img" alt="Clubhouse">
+                    <div class="amenity-slide-content">
+                        <i class="fas fa-glass-cheers"></i>
+                        <h3>Luxury Clubhouse</h3>
+                        <p>Spacious clubhouse for events and gatherings with modern facilities.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/photo 5.avif" class="amenity-slide-img" alt="Kids Play Area">
+                    <div class="amenity-slide-content">
+                        <i class="fas fa-child"></i>
+                        <h3>Kids Play Area</h3>
+                        <p>Safe and engaging play area for children with modern play equipment.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/photo 4.avif" class="amenity-slide-img" alt="Security">
+                    <div class="amenity-slide-content">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>24/7 Security</h3>
+                        <p>Round-the-clock security with CCTV surveillance and trained personnel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 
-                <div class="detail-card">
-                    <h3><i class="fas fa-building"></i> Wing Layout</h3>
-                    <ul>
-                        <li>Wing 1: 3 Flats/Floor</li>
-                        <li>Wing 2: 3 Flats/Floor</li>
-                        <li>Wing 3: 4 Flats/Floor</li>
-                        <li>Total: 10 Flats per Floor</li>
-                    </ul>
+    <!-- Map Section -->
+    <section id="map-section">
+        <div class="section-header">
+            <h2 class="section-title">Prime Location</h2>
+            <p class="section-subtitle">Strategically located in the heart of Santacruz with excellent connectivity</p>
+        </div>
+        <div class="map-container">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.760042646566!2d72.83167931542634!3d19.075719287090106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8f7c5e7f7b5%3A0x1c1b5d5b5b5b5b5b!2sSantacruz%2C%20Mumbai%2C%20Maharashtra%20400054!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="location-details">
+                <h3>Connectivity & Accessibility</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">Located in the prestigious Santacruz West neighborhood, offering excellent connectivity to business districts, educational institutions, healthcare facilities, and entertainment zones.</p>
+                
+                <div class="location-features">
+                    <div class="location-feature">
+                        <i class="fas fa-train"></i>
+                        <div>
+                            <strong>5 mins</strong> from Santacruz Station
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-plane"></i>
+                        <div>
+                            <strong>15 mins</strong> from Mumbai Airport
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-shopping-mall"></i>
+                        <div>
+                            <strong>10 mins</strong> from major shopping malls
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-hospital"></i>
+                        <div>
+                            <strong>8 mins</strong> from premium hospitals
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <strong>12 mins</strong> from international schools
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <strong>20 mins</strong> from BKC & Andheri
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
+    <section id="contact-section">
+        <div class="section-header">
             <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Contact us for site visits, pricing details, or any inquiries</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Our Site Office</h3>
+                    <p>Shapoorji Santacruz, Santacruz West, Mumbai - 400054</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p>+91 98765 43210<br>+91 98765 43211</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@shapoorjisantacruz.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Saturday: 10 AM - 7 PM<br>Sunday: 10 AM - 2 PM</p>
+                </div>
+            </div>
             <div class="contact-form">
-                <form id="contactForm">
+                <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Send us a Message</h3>
+                <form id="mainContactForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <label for="contactPhone">Phone Number *</label>
+                            <input type="tel" id="contactPhone" name="phone" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your requirements..." required></textarea>
+                        <label for="interestType">I'm Interested In</label>
+                        <select id="interestType" name="interest">
+                            <option value="2bhk">2 BHK Apartments</option>
+                            <option value="3bhk">3 BHK Apartments</option>
+                            <option value="jodi">2 BHK Jodi</option>
+                            <option value="all">All Configurations</option>
+                            <option value="pricing">Pricing Details</option>
+                            <option value="brochure">Project Brochure</option>
+                            <option value="visit">Site Visit</option>
+                        </select>
                     </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    <div class="form-group">
+                        <label for="contactMessage">Message (Optional)</label>
+                        <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section" id="location">
-        <div class="container">
-            <h2 class="section-title" style="color: var(--primary);">Prime Location</h2>
-            <p style="text-align: center; font-size: 1.3rem; color: #666; margin-bottom: 1rem;">Santacruz, Mumbai - The Heart of Luxury Living</p>
-            
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.0!2d72.8!3d19.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzQ4LjAiTiA3MsKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-header">
+            <h2 class="section-title">Visual Gallery</h2>
+            <p class="section-subtitle">Explore the beauty and elegance of Shapoorji Santacruz</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/photo 1.avif" alt="Luxury Living Room">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Luxury Living Spaces</div>
+                </div>
             </div>
-            
-            <div class="location-highlights">
-                <div class="highlight-item">
-                    <i class="fas fa-train"></i> Near Santacruz Station
+            <div class="gallery-item">
+                <img src="images/photo 2.avif" alt="Modern Kitchen">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Modern Kitchen Design</div>
                 </div>
-                <div class="highlight-item">
-                    <i class="fas fa-plane"></i> Close to Airport
-                </div>
-                <div class="highlight-item">
-                    <i class="fas fa-shopping-bag"></i> Premium Shopping
-                </div>
-                <div class="highlight-item">
-                    <i class="fas fa-utensils"></i> Fine Dining
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo 3.avif" alt="Elegant Bedroom">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">Elegant Bedrooms</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scroll to Top Button -->
-    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
-        <i class="fas fa-chevron-up"></i>
+    <!-- CTA Section -->
+    <div class="cta-section" id="contact">
+        <h2>Upgrade to a Home Where Comfort Meets Convenience</h2>
+        <p style="color: var(--text-primary); margin-bottom: 2.5rem;">Book a site visit, request the price sheet, or download the full project brochure</p>
+        <div class="cta-buttons">
+            <button class="btn-primary" onclick="openModal('visit')">
+                <i class="fas fa-calendar-check"></i>
+                Book Site Visit
+            </button>
+            <button class="btn-primary" onclick="openModal('brochure')">
+                <i class="fas fa-download"></i>
+                Download Brochure
+            </button>
+            <button class="btn-primary" onclick="openModal('price')">
+                <i class="fas fa-file-invoice-dollar"></i>
+                Request Price Sheet
+            </button>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>This website is for informational purposes only. Details and specifications are subject to change without prior notice. <i class="fas fa-heart" style="color: var(--accent);"></i> for luxury living</p>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h3 id="modalTitle" style="margin-bottom: 2rem;">Get In Touch</h3>
+            <form id="modalForm">
+                <div class="form-group">
+                    <label for="modalName">Full Name *</label>
+                    <input type="text" id="modalName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalPhone">Phone Number *</label>
+                    <input type="tel" id="modalPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalEmail">Email Address *</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Copyright Footer -->
+    <footer class="copyright">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p>© 2024 Shapoorji Santacruz. All rights reserved.</p>
+            <p>This website is for informational purposes only. Details and specifications are subject to change without prior notice.</p>
+            <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">
+                <i class="fas fa-heart" style="color: #ef4444;"></i>
+                Crafted for luxury living
+            </p>
+
+        </div>
     </footer>
 
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
