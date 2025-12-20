@@ -10,26 +10,36 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Rounded Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo"> Shapoorji Santacruz</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Overview</a></li>
-                <li><a href="#highlights">Highlights</a></li>
-                <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#map-section">Location</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <nav id="mainNav">
+    <div class="nav-container">
+        <div class="nav-left">
+              <div class="logo"> Shapoorji Santacruz</div>
         </div>
-    </nav>
+        
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#highlights"><i class="fas fa-star"></i> Highlights</a></li>
+                <li><a href="#amenities"><i class="fas fa-swimming-pool"></i> Amenities</a></li>
+                <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#contact-section"><i class="fas fa-phone-alt"></i> Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-right">
+            <a href="#contact-section" class="nav-cta">
+                <i class="fas fa-phone-alt"></i> Book Now
+            </a>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
 
     <!-- Enhanced Hero Section -->
     <section class="hero-section" id="home">
